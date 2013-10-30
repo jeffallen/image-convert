@@ -1,0 +1,31 @@
+<html>
+<body>
+<h1>Convert to PNG</h1>
+
+<p>
+Got an image in a format that Go knows? Get it converted to PNG!
+</p>
+
+<p> The formats this tool knows are:
+<ul>
+<li> GIF (from the Go standard library)
+<li> JPEG (from the Go standard library)
+<li> BMP (from <a href="http://godoc.org/code.google.com/p/go.image/bmp">code.google.com/p/go.image/bmp</a>)
+<li> TIFF (from <a href="http://godoc.org/code.google.com/p/go.image/tiff">code.google.com/p/go.image/tiff</a>)
+<li> PCX (from <a href="http://godoc.org/github.com/ftrvxmtrx/groke/image/pcx">github.com/ftrvxmtrx/groke/image/pcx</a>)
+<li> XBM (from <a href="http://godoc.org/github.com/knieriem/g/image/xbm">github.com/knieriem/g/image/xbm</a>)
+<li> PNM (from <a href="http://godoc.org/github.com/knieriem/g/image/pnm">github.com/knieriem/g/image/pnm</a>)
+<li> CL2 (from <a href="http://godoc.org/github.com/mewrnd/blizzconv/images/cl2">github.com/mewrnd/blizzconv/images/cl2</a>)
+<li> CEL (from <a href="http://godoc.org/github.com/mewrnd/blizzconv/images/cel">github.com/mewrnd/blizzconv/images/cel</a>)
+</ul>
+Of course, you can also change a PNG into a PNG, if you really want.
+</p>
+
+<form method="POST" enctype="multipart/form-data" action="/convert">
+Image to upload: <input type="file" name="img"><br>
+<br>
+<input type=submit value="Convert to PNG...">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+{
+	"deploy": {
+		"exec": "bin/main"
+	}
+}
