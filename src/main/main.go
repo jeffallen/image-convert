@@ -1,24 +1,24 @@
 package main
 
 import (
-	"strings"
 	"fmt"
 	"image"
 	"image/png"
 	"log"
 	"net/http"
 	"os"
+	"strings"
 
 	// Load all the file formats
 	_ "code.google.com/p/go.image/bmp"
 	_ "code.google.com/p/go.image/tiff"
-	_ "image/gif"
-	_ "image/jpeg"
 	_ "github.com/ftrvxmtrx/groke/image/pcx"
 	_ "github.com/jeffallen/g/image/xbm"
 	_ "github.com/knieriem/g/image/pnm"
-	_ "github.com/mewrnd/blizzconv/images/cl2"
 	_ "github.com/mewrnd/blizzconv/images/cel"
+	_ "github.com/mewrnd/blizzconv/images/cl2"
+	_ "image/gif"
+	_ "image/jpeg"
 )
 
 func convert(w http.ResponseWriter, r *http.Request) {
@@ -46,7 +46,7 @@ func convert(w http.ResponseWriter, r *http.Request) {
 		" decoded-as: ", kind,
 		" new-fn: ", fn)
 
-	w.Header().Add("Content-Disposition", 
+	w.Header().Add("Content-Disposition",
 		fmt.Sprintf("attachment; filename=\"%v\"", fn))
 	err = png.Encode(w, img)
 	if err != nil {
