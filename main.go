@@ -13,7 +13,7 @@ import (
 	_ "code.google.com/p/go.image/bmp"
 	_ "code.google.com/p/go.image/tiff"
 	_ "github.com/ftrvxmtrx/groke/image/pcx"
-	_ "github.com/jeffallen/g/image/xbm"
+	_ "github.com/knieriem/g/image/xbm"
 	_ "github.com/knieriem/g/image/pnm"
 	_ "github.com/mewrnd/blizzconv/images/cel"
 	_ "github.com/mewrnd/blizzconv/images/cl2"
